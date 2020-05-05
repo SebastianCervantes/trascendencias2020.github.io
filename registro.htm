@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="logo-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Trascendencias</title>
+</head>
+<body>
+  <nav class="nav" id="navBar">
+    <section>
+    <a href="#Inicio">TRSC.</a>
+    </section>
+    <section>
+        <a href="index.htm">Inicio</a>
+        <a href="actividades.htm">Actividades</a>
+        <a href="registro.htm" class="button">
+        Regístrate
+        </a>
+    <div id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </section>
+  </nav>
+  <div id="menu-display">
+    <a href="index.htm">Inicio</a>
+    <a href="actividades.htm">Actividades</a>
+    <a href="registro.htm" class="button">
+      Regístrate
+    </a>
+  </div>
+  <div class="spacer-1"></div>
+  <main>
+    <form action="" class="max-width" id="registro-section">
+      <section class="registro">
+        <h1>Regístrate</h1>
+        <h3>Llena los campos con tu información.</h3>
+        <div class="data_group">
+          <div class="input_group">
+            <input type="text" name="nombre" id="nombre" required placeholder=" ">
+            <label for="nombre" class="form_label">
+              Nombre
+            </label>
+          </div>
+          <div class="input_group">
+            <input type="text" name="apellidos" id="apellidos" required placeholder=" ">
+            <label for="apellidos" class="form_label">
+              Apellido(s)
+            </label>
+          </div>
+          <div class="input_group">
+            <input type="email" name="correo" id="correo" required placeholder=" ">
+            <label for="correo" class="form_label">
+              Correo
+            </label>
+          </div>
+          <div class="input_group media_columna m_right_form">
+            <input type="tel" name="telefono" id="telefono" required placeholder=" "
+              onkeydown="javascript:backspacerDOWN(this,event);" 
+              onkeyup="javascript:backspacerUP(this,event);" minlength="14" maxlength="14">
+            <label for="telefono" class="form_label">
+                  Teléfono
+              </label>
+          </div>
+          <div class="input_group media_columna">
+            <input type="number" name="edad" id="edad" min="1" required placeholder=" ">
+            <label for="edad" class="form_label">
+              Edad
+            </label>
+          </div>
+          <div class="input_group radio_group" id="genero">
+            <p class="input_title">Sexo</p>
+            <section>
+              <div>
+                <input type="radio" name="genero" value="hombre" id="hombre" checked>
+                <label for="hombre" class="radio_label">
+                  Hombre
+                </label>
+              </div>
+              <div>
+                <input type="radio" name="genero" id="mujer" value="mujer">
+                <label for="mujer" class="radio_label">
+                  Mujer
+                </label>
+              </div>
+            </section>
+          </div>
+          <div class="input_group media_columna m_right_form">
+            <input type="text" name="carrera" id="carrera" required placeholder=" ">
+            <label for="carrera" class="form_label">
+                Carrera
+            </label>
+          </div>
+          <div class="input_group media_columna">
+            <input type="text" name="campus" id="campus" required placeholder=" ">
+            <label for="campus" class="form_label">
+              Campus
+            </label>
+          </div>
+          <div class="input_group media_columna m_right_form select_group">
+            <select id="semestre">
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">Primero</option>
+              <option value="2">Segundo</option>
+              <option value="3">Tercero</option>
+              <option value="4">Cuarto</option>
+              <option value="5">Quinto</option>
+              <option value="6">Sexto</option>
+              <option value="7">Septimo</option>
+              <option value="8">Octavo</option>
+            </select>
+            <p>Semestre</p>
+          </div>
+          <div class="input_group media_columna select_group">
+            <select id="talla">
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">XS</option>
+              <option value="2">S</option>
+              <option value="3">M</option>
+              <option value="4">L</option>
+              <option value="5">XL</option>
+            </select>
+            <p>Talla</p>
+          </div>
+          <div class="input_group">
+            <input type="text" name="alergias" id="alergias" required placeholder=" ">
+            <label for="name" class="form_label">
+              ¿Tienes Alergias?
+            </label>
+          </div>
+          <div class="input_group radio_group" id="vegetariano">
+            <p class="input_title">¿Eres Vegetariano?</p>
+            <section>
+              <div>
+                <input type="radio" name="vegetariano" id="No_Vegetariano" value="No_Vegetariano" checked>
+                <label for="No_Vegetariano" class="radio_label">
+                  No
+                </label>
+              </div>
+              <div>
+                <input type="radio" name="vegetariano" value="Si_Vegetariano" id="Si_Vegetariano">
+                <label for="Si_Vegetariano" class="radio_label">
+                  Sí
+                </label>
+              </div>
+            </section>
+          </div>
+        </div>
+        <h1>Método de Pago</h1>
+        <h3>Elige la opción de pago adecuada para ti.</h3>
+        <div class="payment_group">
+          <h3>
+            Paga con:
+          </h3>
+          <div class="input_group radio_group" id="tipo_pago">
+            <section>
+              <div class="paybox">
+                <input type="radio" name="pago" value="deposito" id="deposito" checked>
+                <label for="deposito" class="radio_label">
+                  Deposito a cuenta
+                </label>
+              </div>
+              <h3>ó</h3>
+              <div class="paybox">
+                <input type="radio" name="pago" id="paypal" value="paypal">
+                <label for="paypal" class="radio_label">
+                  <img src="images/SVG/paypal.svg" alt="paypal" srcset="" id="paypal_image">
+                </label>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <div class="cart_section">
+        <aside id="shopping_cart">
+          <article class="shopping_info">
+            <h1>Carrito</h1>
+            <section>
+              <div class="shopping_data">
+                <h3>1 x</h3>
+              </div>
+              <div class="shopping_data">
+                <h3>Carnet de participante</h3>
+                <h3>Trascendencias 2020</h3>
+                <h3>$950.00 MXN</h3>
+              </div>
+            </section>
+            <div class="shopping_total">
+                <h2>Total</h2>
+                <h3>$950.00 MXN</h3>
+              </div>
+          </article>
+          <div class="shopping_options">
+            <a href="#">
+              Cancelar
+            </a>
+            <input type="submit" class="button" value="Continuar">
+          </div>
+        </aside>
+        <div id="box"></div>
+      </div>
+      <section class="shopping_total_mobile">
+        <div>
+          <h2>Total</h2>
+          <h3>$950.00 MXN</h3>
+        </div>
+        <div class="shopping_options">
+            <a href="#">
+              Cancelar
+            </a>
+            <input type="submit" class="button" value="Continuar">
+          </div>
+      </section>
+    </form>
+  <footer class="flex flex-column max-width">
+      <section class="width-100 flex">
+        <div class="flex-column">
+          <h2>Te Esperamos</h2>
+          <p>
+              En esta trigesima sexta entrega del congreso Trascendencias
+              buscamos seguir inspirando a las mentes jóvenes de la región
+              en el ámbito de la ingeniería, promoviendo la innovación.
+          </p>
+        </div>
+        <div>
+          <article>
+            <h2>¿Quieres patrocinar?</h2>
+            <a a href="mailto:registrotrsc2019@gmail.com?Subject=Patrocinio"
+              target="_top">
+              Contáctanos
+            </a>
+          </article>
+          <article>
+            <h2>Síguenos en</h2>
+            <a href="https://www.facebook.com/trascendencias/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/trascendenciascetys/" target="_blank">Instagram</a>
+          </article>
+        </div>
+      </section>
+      <section class="flex width-100">
+        <p>Trascendencias 2020</p>
+        <p>El Mundo es Nuestro</p>
+      </section>
+    </footer>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/functions-register.js"></script>
+  </body>
+</html>
