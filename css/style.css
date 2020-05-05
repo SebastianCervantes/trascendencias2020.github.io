@@ -104,7 +104,7 @@ footer a:hover::after:not(.button) {
 button,
 input[type="submit"],
 .button {
-  color: #ffffff;
+  color: #ffffff !important;
   align-items: center;
   background-image: linear-gradient(to right, #DDE300 0%, #00B96A 50%, #00B96A 100%);
   background-size: 200% auto;
@@ -323,8 +323,8 @@ nav > * {
 
 .fadeIn {
   animation-name: entrance;
-  animation-duration: 1.2s;
-  animation-delay: .5s;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1383,6 +1383,14 @@ strong {
     max-width: 300px;
   }
 
+  .fadeIn {
+    animation-name: entrance;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
   nav > section:first-child > a {
     padding-left: 10px;
   }
@@ -1606,6 +1614,89 @@ strong {
   .shopping_options a {
     margin: 20px 0 0;
   }
+
+  .title-section {
+    display: inline-flex;
+    justify-content: center;
+    font-size: 36px;
+  }
+
+  .speakers-section{
+    justify-content: center;
+  }
+
+  .speaker-box {
+    width: 250px;
+    height: 180px;
+    padding-top: 60px;
+  }
+
+  .speaker-box:hover > .speaker-title-section {
+    opacity: 0;
+    top: 40px;
+  }
+
+  .speaker-box:hover > .speaker-curriculum {
+    opacity: 1;
+    bottom: 40px;
+  }
+
+  .speaker-curriculum {
+    position: absolute;
+    opacity: 0;
+    padding: 0 0 0 0;
+    transition: all .5s ease;
+    bottom: 20px;
+    width: 100%;
+  }
+
+  .curriculum-image {
+    display: none;
+  }
+
+  .speaker-image {
+    left: 65px;
+    width: 110px;
+    height: 110px;
+    z-index: 3;
+  }
+
+  .speaker-title-section {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    height: 105px;
+    padding: 0;
+    opacity: 1;
+    transition: all ease .5s;
+    z-index: 2;
+  }
+
+  .speaker-title-section p {
+    text-align: center;
+  }
+
+  .contest-container {
+    margin-bottom: 80px;
+  }
+
+  .contest-container .onda {
+    bottom: 33%;
+  }
+
+  .contest-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 85px 0 0;
+  }
+
+  .contest-box:first-child {
+    margin: 0 0 100px;
+  }
+
+  .workshop-box {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 471px) and (max-width: 650px) {
@@ -1734,18 +1825,28 @@ strong {
     justify-content: center;
   }
 
-  .speakers-section {
-    justify-content: center;
-  }
-
   .speaker-box {
-    width: 200px;
+    width: 210px;
     height: 160px;
     padding-top: 60px;
   }
 
+  .speaker-box:hover > .speaker-title-section {
+    opacity: 0;
+    top: 40px;
+  }
+
+  .speaker-box:hover > .speaker-curriculum {
+    opacity: 1;
+    bottom: 40px;
+  }
+
   .speaker-curriculum {
     position: absolute;
+    opacity: 0;
+    padding: 0 0 0 16px;
+    transition: all .5s ease;
+    bottom: 20px;
   }
 
   .curriculum-image {
@@ -1756,11 +1857,18 @@ strong {
     left: 50px;
     width: 100px;
     height: 100px;
+    z-index: 3;
   }
 
   .speaker-title-section {
+    position: absolute;
+    width: 100%;
+    top: 60px;
     height: 105px;
     padding: 0;
+    opacity: 1;
+    transition: all ease .5s;
+    z-index: 2;
   }
 
   .speaker-title-section p {
@@ -1783,6 +1891,10 @@ strong {
 
   .contest-box:first-child {
     margin: 0 0 100px;
+  }
+
+  .workshop-box {
+    width: 33.33%;
   }
 
 }
