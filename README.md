@@ -1,7 +1,2 @@
-# trascendencias2020.github.io
-# trascendencias2020.github.io
-# trascendencias2020.github.io
-# trascendencias2020.github.io
-# trascendencias2020.github.io
-# trascendencias2020.github.io
-# trascendencias2020.github.io
+# trsc-2020
+# trsc-2020
